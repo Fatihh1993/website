@@ -20,10 +20,23 @@
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
+          <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <script>
+            function hosGeldiniz() {
+                alert("İnternet Siteme Hoş Geldiniz !");
+            }
+        </script>     
 
 </head>
 
-<body id="page-top">
+<body id="page-top"   onload="hosGeldiniz()">
+        <div>
+        </div> 
+
+
+
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -72,9 +85,11 @@
         <div class="subheading mb-5">İstanbul/Küçükçekmece - +90535 497 02 55
           <a href="mailto:name@email.com">fatihkurt.1993@gmail.com</a>
         </div>
-        <p class="lead mb-5">20 Ocak 1993 yılında İstanbulda doğdum.İlk öğrenim ve lise eğitimimi İstanbul'da
-		üniversite eğitimimi Kırklareli'de tamamladım.3 yıllık tecrübe edindikten sonra askere gittim.
-		Şimdi ise yazılım ve web tasarım alanında kendimi geliştirmek istiyorum.Şu anda bir mücellit firmasında grafiker olarak çalışmaktayım.</p>
+        <p class="lead mb-5">2014 yılında İnşaat Teknikerliği bölümünden mezun oldum. 3 yıl boyunca aralarında Türkiye'nin en büyük projelerinden olan Tema İstanbul ve Vadi İstanbul gibi projelerde bölüm şefi olarak çalıştım. Askere gidip geldikten sonra inşaat sektöründeki durgunluktan dolayı bilgisayar bilgim sayesinde grafikerlik alanına geçiş yaptım. Yine aynı firmanın E-Ticaret tarafında trendyol, hepsiburada, n11 ve kendi sitemizde bulunan ürünlerin siteye yüklenmesi, stok-fiyat güncellemesi, kargo süreci gibi süreçleri yürüttüm.
+
+Bu 1,5 yıllık süreçte HTML, CSS, C#, asp.net ve başlangıç seviyesinde php çalıştım. Edindiğim bilgilerimle HTML, CSS, bootstrap ve PHP kullanarak CV niteliğinde bir web sitesi, C# ve Asp.Net kullanarak ise bir E-Ticaret sitesi kodladım.
+
+Yazılım dünyası benim için aşkla yapabildiğim ve yapabileceğim bir dünya. Bu yüzden kendimi geliştirmek ve bu sektörde yetişmek istiyorum.</p>
         <div class="social-icons">
           <a href="https://www.facebook.com/fthkrt1905" target="_blank">
             <i class="fab fa-facebook-f" ></i>
@@ -254,6 +269,11 @@
 
  
 </style>
+
+
+   
+
+
       </div>
     </section>
     </div>
@@ -266,7 +286,7 @@
  </h2>
 
 
-        <form method="" action="" class="my-3">
+        <form method="POST" action="inssert.php" class="my-3">
                 <div class="row">
                    
                     <div class="col-md-8">
@@ -275,32 +295,32 @@
                        
                           
                           <label>İsim:</label>
-                          <input type="firstname" name="" class="form-control" placeholder="İsim">
+                          <input type="firstname" name="username" class="form-control" placeholder="İsim">
                         
                       </div>
                       <div class="col-md-4 " >
                           
                   
                           <label>Soyisim:</label>
-                          <input type="lasttname" name="" class="form-control" placeholder="Soyisim">
+                          <input type="lasttname" name="lastname" class="form-control" placeholder="Soyisim">
                       </div>
                       </div>
 
                     <div class="col-md-8">  
                       <div class="form-group">
                         <label>Email:</label>
-                        <input type="email" name="" class="form-control" placeholder="e-mail">
+                        <input type="email" name="email" class="form-control" placeholder="e-mail">
              
                       </div>
                    
                       <div class="form-group">
                         <label>Konu:</label>
-                        <input type="subject" name="" class="form-control" placeholder="Konu">
+                        <input type="subject" name="konu" class="form-control" placeholder="Konu">
                       </div>
                     
                       <div class="form-group">
                         <label>Mesaj:</label>
-                        <textarea class="form-control" id="Textarea1" placeholder="Mesajınızı Buraya Yazabilirsiniz... "rows="3"></textarea>
+                        <textarea name="mesaj" id="mesaj" class="form-control" placeholder="Mesajınızı Buraya Yazabilirsiniz... "rows="3"></textarea>
                     
                       </div>
               
